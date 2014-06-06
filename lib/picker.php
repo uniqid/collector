@@ -1,7 +1,4 @@
 <?php
-if(!defined('IN_COLLECTOR')) {
-	exit('Access Denied');
-}
 /*************************************************
 
 Picker - the PHP net client
@@ -16,6 +13,10 @@ The latest version of Picker can be obtained from:
 https://github.com/flyfishsoft/collector
 
 *************************************************/
+
+if(!defined('IN_COLLECTOR')) {
+	exit('Access Denied');
+}
 
 class Picker
 {
