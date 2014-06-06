@@ -1,7 +1,7 @@
 Collector
 =========
 
-php collector
+PHP collector
 
 A simple demo (see ./index.php)
 
