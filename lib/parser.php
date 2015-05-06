@@ -2,12 +2,12 @@
 /*************************************************
 
 Parser - the PHP net client
-Author: Jacky Yu <595956280@qq.com>
-Copyright (c): 2012-2013 Jacky Yu, All rights reserved
+Author: Jacky Yu <jacky325@qq.com>
+Copyright (c): 2012-2015 Jacky Yu, All rights reserved
 Version: 1.0.0
 
 * This library is free software; you can redistribute it and/or modify it.
-* You may contact the author of Parser by e-mail at: 595956280@qq.com
+* You may contact the author of Parser by e-mail at: jacky325@qq.com
 
 The latest version of Parser can be obtained from:
 https://github.com/flyfishsoft/collector
