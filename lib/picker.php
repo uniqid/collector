@@ -107,7 +107,7 @@ class Picker
 		}
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($ch, CURLOPT_URL, $URI);
-		curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)');
+		curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.3; rv:36.0) Gecko/20100101 Firefox/36.04');
 		curl_setopt($ch, CURLOPT_COOKIEJAR, $this->cookie_file);
 		curl_setopt($ch, CURLOPT_COOKIEFILE, $this->cookie_file);
 		$results = curl_exec($ch);
