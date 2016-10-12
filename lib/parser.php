@@ -10,7 +10,7 @@ Version: 1.0.0
 * You may contact the author of Parser by e-mail at: jacky325@qq.com
 
 The latest version of Parser can be obtained from:
-https://github.com/flyfishsoft/collector
+https://github.com/uniqid/collector
 
 *************************************************/
 
