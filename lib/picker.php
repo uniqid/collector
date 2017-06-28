@@ -26,6 +26,7 @@ class Picker
 	public $cookie_file = '';   // Cookie file name
 	public $logs_path   = '';   // Temporary directory that the webserver has permission to write to.
 	public $log_file    = '';   // log file name
+    public $referer     = '';   // referer
 
 	public function __construct($config = array())
 	{
@@ -107,6 +108,7 @@ class Picker
 		}
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($ch, CURLOPT_URL, $URI);
+		empty($this->referer) || curl_setopt($ch, CURLOPT_REFERER, $this->referer);
 		curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.3; rv:36.0) Gecko/20100101 Firefox/36.04');
 		curl_setopt($ch, CURLOPT_COOKIEJAR, $this->cookie_file);
 		curl_setopt($ch, CURLOPT_COOKIEFILE, $this->cookie_file);
@@ -115,9 +117,22 @@ class Picker
 		$this->results = $results;
 	}
 
+	public function set_cookie_file($filename){
+		$this->cookie_file = $this->cookie_path . '/persistent_'.md5($filename).'.tmp';
+	}
+
+	public function set_referer($referer){
+		$this->referer = $referer;
+	}
+
 	public function __destruct()
 	{
-		is_file($this->cookie_file) && unlink($this->cookie_file);
+		if(is_file($this->cookie_file)){
+			$cookie_pre = substr(basename($this->cookie_file), 0, 11);
+			if($cookie_pre != 'persistent_'){
+				unlink($this->cookie_file);
+			}
+		}
 	}
 }
 ?>
